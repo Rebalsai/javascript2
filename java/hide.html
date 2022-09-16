@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div id="tablehide">
+    <table id="table" border="1">
+        <tr>
+            <th>First Name</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>Phone Number</th>
+            <th>Country</th>
+            <th>State</th>
+            <th>Website</th>
+        </tr>
+        <tr>
+            <th>saikumar</th>
+            <th>sai@gmail.com</th>
+            <th>22</th>
+            <th>6300385435</th>
+            <th>India</th>
+            <th>Hyderabad</th>
+            <th>http:flipkart.com</th>
+        </tr>
+        <tr>
+            <th>subbu</th>
+            <th>subbu@gmail.com</th>
+            <th>24</th>
+            <th>7569670846</th>
+            <th>America</th>
+            <th>Newyork</th>
+            <th>http:Amazon.com</th>
+        </tr>
+    </table></br></br>
+    <button onclick="addShow()">Add</button>
+    <button onclick=" editRow()">Edit</button>
+    <button onclick="removeRow()">Delete</button>
+</div>
+
+<div id="formhide">
+              First Name:<input type="text" name="fname" id="fname" />
+            <span id="name2" style="color: red;"></span></br></br>
+                Email:<input type="email" name="email" id="email" />
+                <span id="name3" style="color: red;"></span></br></br>
+                Age:<input type="date" name="age" id="age" /><span id="name4" style="color: red;"></span></br></br>
+                Phone Number:<input type="number" name="pnumber" id="pnumber" /><span id="name5" style="color: red;"></span></br></br>
+                Country:<select name="slct1" id="slct1" onchange="App(this.id,'slct2')"><span id="name6" style="color: red;"></span></br></br>
+                    <option value="">choose country</option>
+                    <option value="india">India</option>
+                    <option value="america">America</option>
+                </select>
+
+                State:<select name="slct2" id="slct2">
+
+                </select>
+     
+            <script>
+                function App(s1, s2) {
+                    var s1 = document.getElementById(s1);
+                    var s2 = document.getElementById(s2);
+
+                    s2.innerHTML = "";
+
+                    if (s1.value == "india") {
+
+                        var optionArray = ['delhi|Delhi', 'hyderabad|Hyderabad', 'mumbai|Mumbai',
+                            'bangalore|Bangalore'];
+                    }
+                    else if (s1.value == 'america') {
+
+                        var optionArray = ['new york|New York', 'chicago|Chicago'];
+                    }
+                    for (var option in optionArray) {
+
+                        var pair = optionArray[option].split("|");
+                        var newoption = document.createElement("option");
+
+                        newoption.value = pair[0];
+                        newoption.innerHTML = pair[1];
+                        s2.options.add(newoption);
+                    }
+                }
+            </script></br></br>
+           
+                web URL<input type="url" id="web" name="web" /><span id="name7" style="color: red;"></span></br></br>
+        </br>
+            <button onclick="addHtmlTableRow()">Submit</button>
+            <!-- <button onclick="editRow()">update</button> -->
+        </div>
+ 
+        <script src="../java/hide.js"></script>
+</body>
+</html>

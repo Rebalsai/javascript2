@@ -1,0 +1,119 @@
+<html>
+
+<head>
+    <script src="../java/jstask.js"></script>
+    
+</head>
+
+<body>
+
+
+    Add two input fields<br />
+    B1<input type="text" id="b1" />
+    B2<input type="text" id="b2" />
+    <button onclick="add()">Add</button>
+    o/p<input id="result" /><br /><br /><br />
+
+    Tofixed<br />
+    C1:<input text="number" id="n1" />
+    C2:<input text="number" id="n2" />
+    <button onclick="App1()">tofix</button>
+    o/p:<input text="number" id="n3" /><br /><br /><br />
+
+    Operators<br />
+    <label>D1</label>
+    <input type="number" id="val5" />
+    <label>D2</label>
+    <input type="number" id="val6" />
+    <label>D3</label>
+
+
+
+
+
+    <!-- add two numbers -->
+    <script>
+        // function add(){
+        //     let a =parseInt(document.getElementById("b1").value);
+        //     let b =parseInt(document.getElementById("b2").value);
+        //     let c= a+b;
+        //     // let c = parseInt(a) + parseInt(b);
+        // //     let d=document.getElementById("b1").value;
+        // //    let e=document.getElementById("b2").value;
+        //  document.getElementById("result").value=c;
+        //  if(a,b){
+        //         document.getElementById("result").value=a.concat(b);
+        //     }
+
+        // }   
+        function add() {
+            let a = document.getElementById('b1').value;
+            let b = document.getElementById('b2').value;
+
+            if (a > 0 && b > 0) {
+                let d = parseFloat(a) + parseFloat(b);
+                document.getElementById('result').value = d;
+            } else {
+                let c = a + b;
+                document.getElementById('result').value = c;
+            }
+        }
+    </script>
+
+
+    <!-- fixed method  -->
+    <script>
+        function App1() {
+     
+            let a = document.getElementById("n1").value;
+            let b = document.getElementById("n2").value;
+            if(a > 0 && b > 0){
+             // let n = a.toFixed(b);
+           let n = document.getElementById("n3").innerHTML =Number(a).toFixed(b);
+           document.getElementById("n3").value=n;
+            }else{
+                document.getElementById("n3").value="invalid";
+            }
+        }
+    </script>
+
+
+    <!-- dropdown -->
+    <select id="operator" onclick="oper()">
+        <option value="+=">+=</option>
+        <option value="-=">-=</option>
+        <option value="*=">x=</option>
+        <option value="/=">/=</option>
+        <option value="%=">%=</option>
+        <option value=">">></option>
+        <option value="<">< </option>
+        <option value=">=">>=</option>
+        <option value="<="> <= </option>
+        <option value="==">==</option>
+        <option value="!=">!=</option>
+
+    </select>
+    O/p:<input type="text" id="demo2" />
+    <br /><br /><br />
+
+
+   
+    <p id="table"></p>
+        E1:<input type="text" id="t1"/>
+        <button onclick="check()" id="c1">Check</button></br></br>
+        <div id="hide" disable>
+        <button onclick="sliced()" id="c2" >slice</button>
+        E2:<input type="text" id="t2" />
+        <button id="c3" onclick="update()" >Update</button></br></br>
+    </div>
+        o/p:<input type="text" id='t3'/>
+      
+
+
+    <script>
+   // let btn = document.getElementById('Hide_Show').hidden= true;
+    </script>
+   
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<html>
+    <head>
+       <script src="../java/newtask.js"></script>
+    </head>
+    <body>
+     
+
+        Add two input fields<br/>
+        B1<input type="text" id="b1"/>
+        B2<input type="text" id="b2"/>
+        <button onclick="add()">Add</button>
+        o/p<input  id="result"/><br/><br/><br/>
+ 
+           Tofixed<br/>
+            C1:<input text="number" id="n1"/>
+            C2:<input text="number" id="n2"/>
+              <button onclick="App1()">tofix</button>
+             o/p:<input text="number" id="n3"/><br/><br/><br/>
+
+             Operators<br/>
+             <label>D1</label>
+             <input type="number" id="val5"/>
+             <label>D2</label>
+             <input type="number" id="val6"/>
+             <label>D3</label>
+             
+        
+        
+
+
+      <!-- add two numbers -->
+        <script>
+            function add(){
+                let a =parseInt(document.getElementById("b1").value);
+                let b =parseInt(document.getElementById("b2").value);
+                let c= a+b;
+                // let c = parseInt(a) + parseInt(b);
+            //     let d=document.getElementById("b1").value;
+            //    let e=document.getElementById("b2").value;
+             document.getElementById("result").value=c;
+             if(a,b){
+                    document.getElementById("result").value=a.concat(b);
+                }
+                
+            }   
+        </script>
+
+
+        <!-- fixed method  -->
+    <script>
+    function App1(){
+    let num = parseFloat (document.getElementById("n1").value);
+    let num2 = parseFloat  (document.getElementById("n2").value);
+    let n = num.toFixed(num2);
+    
+    document.getElementById("n3").value = n;
+    }
+  
+ 
+    
+    </script>
+
+
+       <!-- dropdown -->
+       <select id="operator" onclick="oper()">
+        <option value="+=">+=</option>
+       <option value="-=">-=</option>
+       <option value="*=">x=</option>
+       <option value="/=">/=</option> 
+       <option value="%=">%=</option>
+       <option value=">">></option>
+       <option value="<"><</option>
+       <option value=">=">>=</option>
+       <option value="<="><=</option>
+       <option value="==">==</option>
+       <option value="!=">!=</option>
+       
+       </select>
+       O/p:<input  type="text" id="demo2" />
+    <br/><br/><br/>
+
+
+      <!-- table checked -->
+
+<table border='3' id="t1">
+   
+    <tr>
+     <th>First Name</th>
+     <th>Last Name</th>
+     <th>Number</th>
+    </tr>
+    <tr>
+     <td>A</td>
+     <td>sai</td>
+     <td>136</td>
+    </tr>
+    <tr>
+     <td>B</td>
+     <td>venkat</td>
+     <td>108</td>
+    </tr>
+    <tr>
+        <td>C</td>
+        <td>subbu</td>
+        <td>101</td>
+       </tr>
+ </table><br/>
+ E1:<input type="text"/>
+<button id="but">checked</button><br/><br/>
+<button>slice</button>
+E2:<input type="text"/>
+<button>update</button><br/><br/>
+o/p:<input type="text"/>
+ 
+    </body>
+</html>

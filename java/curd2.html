@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   
+</head>
+
+<body>
+ 
+			<div class="employee-form" id="formid">
+                <form id="form" onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label> Name:</label><label class="validation-error hide" id="fullNameValidationError"></label>
+                        <input type="text" name="fullName" id="fullName" maxlength="15">
+                        <span style="color: red" id="errorName"></span>
+                    </div>
+                    <br>
+                    <div>
+                        <label>Email Id:</label>
+                        <input  name="email" id="email">
+                        <span style="color: red" id="errorEmail">
+                    </div>
+                    <br>
+                    <div>
+                        <label>Date Of Birth:</label>
+                        <input type="date" name="date" id="dob">
+                        <span style="color: red" id="errordob">
+                    </div>
+                    <br>
+                    <div>
+                        <label>Phone No:</label>
+                        <input  name="phone" id="phone" maxlength="13">
+                        <span style="color: red" id="errorPhone"></span>
+                    </div>
+                    <br>
+                    <div>
+                        <label>Country:</label>
+                       <select id="country" placeholder="select one" name="country">
+                        <option value="">choose country</option>
+                       </select> <span id="errormsg" style="color: red;"></span>
+                    </div>
+                    <br>
+                    <div>
+                    State<select id="state" name="state">State</select>
+                       
+                    </div>
+                    <br>
+                    <div>
+                    City<select id="city" name="city">City</select></br>
+                    </div>
+                    <br>
+                    <div>
+                        WEBURL:<input   id="web" name="web"/></br>
+                             <span style="color: red" id="errorWebUrl"></span>
+                        </div>
+                        <br>
+                    <div  class="form-action-buttons">
+                        <input type="submit" onclick="validate()" value="Submit">
+                    </div>
+                </form>
+		</div>
+		<br/>
+		<div class = "employees-table">
+                <table class="list" id="tableId" border="2">
+                    <thead>
+                        <tr>
+                            <th> Name</th>
+                            <th>Email Id</th>
+                            <th>Age</th>
+                            <th>Phone no</th>
+                            <th>Country</th>
+                            <th>State</th>
+                            <th>city</th>
+                            <th> URL</th>
+                            <th>Actions</th>
+                      
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table></br>
+                <button onclick="addShow()">Add</button>
+        </div>
+  
+   <script src="../java/app.js"></script>
+</body>
+</html>

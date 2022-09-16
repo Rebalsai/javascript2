@@ -1,0 +1,188 @@
+<!-- <html>
+    <head>
+       <style>
+       
+        .container{overflow: hidden}
+        .tab{float: left;}
+        .tab-2{margin-left: 50px;}
+        .tab-2 input{display: block;}
+       </style>
+       <script src="../java/curd.js"></script>
+    </head>
+    
+    <body>
+        
+        <div class="container">
+            <div class="tab tab-1">
+                <table id="table" border="1">
+                    <tr>
+                            <th>First Name</th>
+                            <th>Email</th>
+                            <th>Phone Number</th>
+                            <th>Country</th>
+                            <th>State</th>
+                            <th>Age</th>
+                            <th>Website</th>
+                    </tr>
+
+                </table>
+            </div></br></br>
+            <div class="tab tab-2">
+              
+                    First Name  <input type="text" name="firstName" id="firstName"/>
+                    Email  <input type="text" name="email" id="email"/>
+                    Phone Number <input type="text" name="phoneNumber" id="phoneNumber"/>
+                    Country  <input type="text" name="country" id="country"/>
+                    State   <input type="text" name="state" id="state"/>
+                    Age   <input type="text" name="age" id="age"/>
+                    Website  <input type="text" name="website" id="website"/></br></br>
+                    <button onclick="addHtmlTableRow()">Add</button>
+                    <button>Edit</button>
+                    <button>Delete</button>
+            </div>
+        </div>
+        
+    <script>
+        function addHtmlTableRow(){
+            var table = document.getElementById("table"),
+            newRow = table.insertRow(tanle.length),
+            cell1 = newRow.insertCell(0), 
+            cell2 = newRow.insertCell(1), 
+            cell3 = newRow.insertCell(2), 
+            cell4 = newRow.insertCell(3), 
+            cell5 = newRow.insertCell(4), 
+            cell6 = newRow.insertCell(5), 
+            cell7 = newRow.insertCell(6), 
+
+            FirstName = document.getElementById("firstName").value,
+            email = document.getElementById("email").value,
+            phoneNumber = document.getElementById("phoneNumber").value,
+            country = document.getElementById("country").value,
+            state = document.getElementById("state").value,
+            age = document.getElementById("age").value,
+            website = document.getElementById("website").value;
+
+            cell1.innerHTML = FirstName;
+            cell2.innerHTML = email;
+            cell3.innerHTML = phoneNumber;
+            cell4.innerHTML = country;
+            cell5.innerHTML = state;
+            cell6.innerHTML = age;
+            cell7.innerHTML = website;
+
+        }
+    </script>
+    </body>
+</html> -->
+
+
+
+<html>
+
+<head>
+    <style>
+        .container {
+            overflow: hidden;
+        }
+
+        .tab {
+            float: left;
+        }
+
+        .tab-2 {
+            margin-left: 50px
+        }
+
+        .tab-2 input {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+ 
+</head>
+
+<body>
+    
+        <div class="container">
+            <div class="tab tab-1">
+                    <table id="table" border="1">
+                        <tr>
+                            <th>First Name</th>
+                            <th>Email</th>
+                            <th>Age</th>
+                        </tr>
+                    </table></br>
+              
+                
+            </div>
+        </div>
+        <div id="hide_form">
+            <div class="tab tab-2">
+                First Name:<input type="text" name="fname" id="fname" />
+                Email:<input type="email" name="email" id="email" />
+                Age:<input type="number" name="age" id="age" />
+            </br>
+           
+
+            <button onclick="addHtmlTableRow()">Add</button>
+                <button onclick="editRow()">Edit</button>
+                <button>Delete</button>
+    </div>
+
+
+    <script src="../java/curd.js"></script>
+
+   
+    <!-- <script>
+            function addHtmlTableRow(){
+                var table = document.getElementById("table"),
+                newRow = table.insertRow(table.length),
+                cell1 = newRow.insertCell(0),
+                cell2 = newRow.insertCell(1),
+                cell3 = newRow.insertCell(2),
+                cell4 = newRow.insertCell(3),
+                cell5 = newRow.insertCell(4),
+                cell6 = newRow.insertCell(5),
+                cell7 = newRow.insertCell(6),
+
+
+                fname = document.getElementById("fname").value,
+                email = document.getElementById("email").value,
+               age = document.getElementById("age").value;
+                // years = new Date(new Date() - new Date(enteredDate)).getFullYear() - 1970;
+                pnumber = document.getElementById("pnumber").value;
+                country = document.getElementById("slct1").value;
+               state = document.getElementById("slct2").value;
+               web = document.getElementById("web").value;
+                
+
+                cell1.innerHTML = fname;
+                cell2.innerHTML = email;
+                cell3.innerHTML = age;
+                cell4.innerHTML = pnumber;
+                cell5.innerHTML = country;
+                cell6.innerHTML = state;
+                cell7.innerHTML = web;
+            }
+        </script> -->
+
+    <!-- <script>
+          document.getElementById("form").hidden = true;
+// document.getElementById("form").hidden = false;
+function onFormSubmit() {
+    if (validate()) {
+        document.getElementById("form").hidden = false;
+        // document.getElementById("form").hidden = true;
+        var formData = readFormData();
+        if (selectedRow == null)
+            insertNewRecord(formData);
+        else
+        // document.getElementById("form").hidden = false;
+            updateRecord(formData);
+        resetForm();
+    }
+}
+        </script> 
+</body>
+
+</html>

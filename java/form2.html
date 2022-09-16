@@ -1,0 +1,225 @@
+<!-- 
+<html>
+    <head>
+
+    </head>
+    <body>
+        A1:<input type="text"/>
+        A2:<input type="text"/><br/><br/>
+        A3:<input type="number"/>
+        A4:<input type='radio' name='Gender' />Male
+           <input type='radio' name='Gender'/>Female<br/><br/>
+           <div>
+        A5:<select name="slct1" id="slct1" onchange="App(this.id,'slct2')">
+            <option value="">choose country</option>
+            <option value="india">India</option>
+            <option value="america">America</option>
+        </select>
+        A6:<select name="slct2" id="slct2">
+
+        </select>
+           </div>
+           <script>
+            function App(s1,s2){
+            var s1 = document.getElementById(s1);
+            var s2  = document.getElementById(s2);
+
+            s2.innerHTML ="";   
+
+            if(s1.value == "india"){
+
+                var optionArray=['delhi|Delhi','hyderabad|Hyderabad','mumbai|Mumbai',
+                                'bangalore|Bangalore'];
+            }
+            else if(s1.value == 'america'){
+
+                var optionArray=['new york|New York','chicago|Chicago'];
+            }
+            for(var option in optionArray){
+
+               var pair = optionArray[option].split("|");
+               var newoption = document.createElement("option");
+
+               newoption.value = pair[0];
+               newoption.innerHTML = pair[1];
+               s2.options.add(newoption);
+            }
+            }
+           </script><br/>
+
+           A7:<input type="text area"/>
+           <button>submit</button><br/><br/>
+
+           <table id="tb1" border="1">
+            <tr>
+                 <th>A1</th>
+                 <th>A2</th>
+                 <th>Age</th>
+                 <th>A4</th>
+                 <th>A5</th>
+                 <th>A6</th>
+                 <th>A7</th>
+                 <th>Aligible</th>
+             </tr>
+         </table>
+
+           
+    </body>
+</html> -->
+
+<html>
+    <head>
+        <p id="a1"></p>
+        <p id="a2"></p>
+                
+    </head>
+    <body>
+         <!-- <script src="../java/form2.js"></script> -->
+        <!-- <Form action="" onsubmit="validateform()"> -->
+        A1:<input type="text" placeholder=" Name" id="name" maxlength="20" required/>
+        A2:<input type="text" placeholder=" LastName" id="lname"/><br/><br/>
+        A3:<input type="number" placeholder="Age" id="age" maxlength="3"/>
+        A4:<input type='radio' name='gender' id="gen" value="Male" />Male
+           <input type='radio' name='gender' id="gen1" value="Female"  />Female<br/><br/>
+           <div>
+        A5:<select name="slct1" id="slct1" onchange="App(this.id,'slct2')">
+            <option value="">choose country</option>
+            <option value="india">India</option>
+            <option value="america">America</option>
+        </select>
+        A6:<select name="slct2" id="slct2">
+
+        </select>
+           </div>
+           <script>
+            function App(s1,s2){
+            var s1 = document.getElementById(s1);
+            var s2  = document.getElementById(s2);
+
+            s2.innerHTML ="";   
+
+            if(s1.value == "india"){
+
+                var optionArray=['delhi|Delhi','hyderabad|Hyderabad','mumbai|Mumbai',
+                                'bangalore|Bangalore'];
+            }
+            else if(s1.value == 'america'){
+
+                var optionArray=['new york|New York','chicago|Chicago'];
+            }
+            for(var option in optionArray){
+
+               var pair = optionArray[option].split("|");
+               var newoption = document.createElement("option");
+
+               newoption.value = pair[0];
+               newoption.innerHTML = pair[1];
+               s2.options.add(newoption);   
+            }
+            }
+           </script><br/>
+
+           A7:<input type="text area" placeholder="Address" id="address"/>
+           <button id="button"  onclick="addRow()">submit</button><br/><br/>
+           <!-- <input type="button" name="button" id="id" value="Add" onclick="addRow()"/> -->
+           <br/><br/><br/>
+           <table id="tb1" border="5">
+            <tr>
+                 <th>A1</th>
+                 <th>A2</th>
+                 <th>Age</th>
+                 <th>A4</th>
+                 <th>A5</th>
+                 <th>A6</th>
+                 <th>A7</th>
+                 <th>Aligible</th>
+             </tr>
+         </table>
+
+        <!-- </Form> -->
+
+        <script>
+            //add row
+            function addRow(){
+                //debugger
+            //radio butto.............
+                var rdb1 = document.getElementById("gen");
+                var rdb2 = document.getElementById("gen1");
+    if(rdb1.checked==true){
+       //  document.write(rdb1.value);
+       // document.getElementById("a1").innerHTML=rdb1.value;
+       male = document.getElementById("a1").value=rdb1.value;
+    }
+    else if(rdb2.checked==true){
+        // document.write(rdb2.value);
+      //  document.getElementById("a1").innerHTML=rdb2.value;
+      male = document.getElementById("a1").value=rdb2.value;
+    }
+    else{
+        // document.write("please select one record")
+    }
+        
+    //age eligible.............
+      
+            //   var num;
+            //     num = Number(document.getElementById("age").value);
+            //     if(num<18){
+            //      //   alert("not eligible");
+            //       // document.write("false");
+            //     age = document.getElementById("a2").innerHTML="false";
+            //     // no="a1";
+            //     // no.innerHTML="false"
+            //     }else{
+            //        // alert("eligible");
+            //       // document.write("true");
+            //     age =  document.getElementById("a2").innerHTML="true";
+            //     }
+            }
+
+
+                var table = document.getElementById("tb1"),
+                    newRow = table.insertRow(table.length),
+                    cell1 = newRow.insertCell(0),
+                    cell2 = newRow.insertCell(1),
+                    cell3 = newRow.insertCell(2),
+                    cell4 = newRow.insertCell(3),
+                    cell5 = newRow.insertCell(4),
+                    cell6 = newRow.insertCell(5),
+                    cell7 = newRow.insertCell(6),
+                    cell8 = newRow.insertCell(7),
+                    
+
+                    name = document.getElementById("name").value,
+                    lname = document.getElementById("lname").value,
+                    age = document.getElementById("age").value;
+                  //  male = document.getElementById("a1").value;
+                   country = document.getElementById("slct1").value;
+                    state = document.getElementById("slct2").value;
+                    address = document.getElementById("address").value;
+                   // age = document.getElementById("a2").value;
+
+                    cell1.innerHTML = name;
+                    cell2.innerHTML = lname;
+                    cell3.innerHTML = age;
+                    cell4.innerHTML = male;
+                    cell5.innerHTML = country;
+                    cell6.innerHTML = state;
+                    cell7.innerHTML = address;
+                    cell8.innerHTML = age;
+
+                
+
+            
+        </script>
+        
+        <!-- <script>
+            function radio(){
+                let rdb=document.querySelector('input[name="gender"]:checked').value;
+                let rdb1=document.querySelector('input[name="gender"]:checked').value;
+
+    console.log(value)
+            }
+        </script -->
+          </body>
+          </html> 
+     

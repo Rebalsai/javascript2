@@ -1,0 +1,73 @@
+<html>
+    <head>
+       <!-- <p id="n1"></p> -->
+    </head>
+    <body>
+       <!-- name:<input type="text" id="demo"/></br></br>
+       password:<input type="password" id="demo1"/></br></br> -->
+       gender: <input type="radio" name="gender" value="Male" id="n3" >male</input>
+              <input type="radio" name="gender" value="Female" id="n4" >female</input></br></br>
+       <!-- <button type="submit" onclick="App()">click</button></br> -->
+       <button type="submit" onclick="App1()">click</button></br>
+       <!-- result:<input id="n1"/> -->
+    
+  <!-- <script>
+  //   function App(){
+  //       // debugger
+  //       let a = document.getElementById("demo").value;
+  //       let b = document.getElementById("demo1").value;
+  //       let c = document.getElementById("n3").value;
+  //       let d = document.getElementById("n4").value;
+  //       let e=  a+" "+ b +" "+ c + " " + d;
+  //       // console.log(a.value)
+  //       //  document.write(a.value);
+  //       document.getElementById("n1").value=e;
+  //   }
+  </script> -->
+  <!-- <script>
+    function App1(){
+          let c = document.getElementById("n3").value;
+         let d = document.getElementById("n4").value;
+
+    } -->
+  </script>
+        <script>
+          function App1(){
+            var rdb = document.getElementById("n3");
+            var rdb1 = document.getElementById("n4");
+            if(rdb.checked==true){
+              document.write(rdb.value);
+            } else if(rdb1.checked==true){
+              document.write(rdb1.value)
+            }else{
+              document.write("please select one record")
+            }
+            
+          }
+          // document.getElementById("n1").innerHTML=App()
+          
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+<!-- name : <input type="text" id="demo" />  
+password: <input type="password" id="demo1"/>
+  <button type="submit" onclick="App()">click me</button><br/><br/>
+  result:<input id="n1"/>
+<script>
+function App(){
+  // debugger 
+  let a=document.getElementById("demo").value;
+  let b=document.getElementById("demo1").value;
+  let c=a+" "+b;
+  document.getElementById("n1").value=c;
+  // console.log(c)
+} -->
